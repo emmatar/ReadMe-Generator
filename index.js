@@ -5,8 +5,8 @@ const generateMarkdown = require('./utils/generateMarkdown')
 
 // // TODO: Create a function to initialize app
 function init() {
-inquirer
 // List of Questions
+inquirer
     .prompt([
     {
         type: 'input',
@@ -62,7 +62,11 @@ inquirer
         message: "What are the test instructions?",
     }
 ]).then((responses) => {
-    const markdown = generateMarkdown(responses);
+    const gitHub = responses.github
+    const email = responses.email
+    const markdown = generateMarkdown(responses, gitHub, email);
+
+
 
     fs.writeFile('./NewREADME/README.md', markdown, (err) => 
     err ? console.log(err) : console.log("Successfully generated ReadMe.")
