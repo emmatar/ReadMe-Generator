@@ -12,17 +12,9 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title} ${renderLicenseBadge(data.license)}
+function generateMarkdown(data, github, email) {
+  return `# ${data.title}  ${renderLicenseBadge(data.license)}
   
   ## Description
   ${data.description}
@@ -34,10 +26,10 @@ function generateMarkdown(data) {
   - [Credits](#credits)
   - [License](#license)
   - [Tests](#tests)
-  - [Contact](#github, #email)
+  - [Contact](#)
 
   ## Installation
-  ${data.installation}
+    ${data.installation}
 
   ## Usage
   ${data.usage}
@@ -49,12 +41,23 @@ function generateMarkdown(data) {
   ${data.license}
 
   ## Tests 
-  ${data.test}
+    ${data.test}
 
   ## Contact
-  ${data.contact}
+  
+  To see more of my projects or how to contribute, click on my GitHub username here --> [${github}](https://github.com/${github})
+
+  ...aaaaand...
+
+  If you REALLY need to get intouch with me, send me an email here --> ${email}
+
+
+  
 
   `
 }
+// above github and email need to display in contact section of readme. Both currently read "undefined"
+
+
 
 module.exports = generateMarkdown;
