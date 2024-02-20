@@ -6,6 +6,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
 // // TODO: Create a function to initialize app
 function init() {
 inquirer
+// List of Questions
     .prompt([
     {
         type: 'input',
@@ -42,7 +43,7 @@ inquirer
     {
         type: 'input',
         name: 'test',
-        default: 'npm test',
+        default: 'node index.js',
         message: "What command should be run to test application?"
     },
     {
