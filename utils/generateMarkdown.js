@@ -4,11 +4,11 @@ function renderLicenseBadge(license) {
   if (license === 'MIT'){
     return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
   } else if (license === 'APACHE 2.0') {
-    return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+    return '[![License: APACHE](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
   } else if (license === 'GPL 3.0') {
     return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
   } else if (license === 'BSD 3') {
-    return '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
+    return '[![License: BSD 3](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
   }
 }
 
@@ -17,39 +17,48 @@ function generateMarkdown(data, github, email) {
   return `# ${data.title}  ${renderLicenseBadge(data.license)}
   
   ## Description
+
   ${data.description}
 
-  ## Table of Content
+  ## Table of Contents
   - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Credits](#credits)
   - [License](#license)
+  - [Installation](#installation)
   - [Tests](#tests)
-  - [Contact](#)
-
-  ## Installation
-    ${data.installation}
-
-  ## Usage
-  ${data.usage}
-
-  ## Credits 
-  ${data.credits}
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Questions](#questions)
 
   ## License 
-  ${data.license}
 
-  ## Tests 
-    ${data.test}
+  This application is under ${data.license} Licensing.<br />
+  Click the license badge above for more information regarding this license
 
-  ## Contact
+  ## Installation
+
+    ${data.installation}
   
-  To see more of my projects or how to contribute, click on my GitHub username here --> [${github}](https://github.com/${github})
+  ## Tests 
 
-  ...aaaaand...
+    ${data.test}
+  
+  ## Usage
 
-  If you REALLY need to get intouch with me, send me an email here --> ${email}
+  ${data.usage}
+
+  ## Contributing 
+
+  ${data.contributing}
+
+  ## Questions
+  Application questions? 
+  
+  GitHub Account: [${github}](https://github.com/${github})
+
+  Have More Questions?!
+
+  Email me here: ${email}
+  
 
 
   
