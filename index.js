@@ -49,18 +49,13 @@ inquirer
     {
         type: 'input',
         name: 'usage',
-        message: "What does the user need to know about using the repo?"
+        message: "How can the user employ the application?"
     },
     {
         type: 'input',
-        name: 'credits',
-        message: "What does the user need to know about contributing to the repo?"
+        name: 'contributing',
+        message: "How can the user contribute?"
     },
-    {
-        type: 'input',
-        name: 'test',
-        message: "What are the test instructions?",
-    }
 ]).then((responses) => {
     const gitHub = responses.github
     const email = responses.email
