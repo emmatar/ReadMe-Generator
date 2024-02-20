@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -14,9 +16,36 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `<h1> ${data.title}</h1>
+  return `
+  # <Your-Project-Title>
 
-`;
+  ## Description
+  
+  ## Table of Contents (Optional)
+  
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  
+  ## Installation
+  
+  ## Usage
+  
+  ## Credits
+  
+  ## License
+  
+  ## Badges
+  
+  ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
+  
+  ## Features
+  
+  ## How to Contribute
+  
+  ## Tests
+  `;
 }
 
 module.exports = generateMarkdown;
