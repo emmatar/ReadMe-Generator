@@ -9,13 +9,17 @@ function renderLicenseBadge(license) {
     return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
   } else if (license === 'BSD 3') {
     return '[![License: BSD 3](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
+  } else if (license === "None") {
+    return " ";
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data, github, email) {
-  return `# ${data.title}  ${renderLicenseBadge(data.license)}
-  
+  return `
+
+  # ${data.title}  ${renderLicenseBadge(data.license)}
+
   ## Description
 
   ${data.description}
@@ -32,16 +36,16 @@ function generateMarkdown(data, github, email) {
   ## License 
 
   This application is under ${data.license} Licensing.<br />
-  Click the license badge above for more information regarding this license
+  Click the license badge above for more information regarding this license.
 
   ## Installation
 
     ${data.installation}
-  
+
   ## Tests 
 
     ${data.test}
-  
+
   ## Usage
 
   ${data.usage}
@@ -60,13 +64,7 @@ function generateMarkdown(data, github, email) {
   Email me here: ${email}
   
 
-
-  
-
   `
 }
-// above github and email need to display in contact section of readme. Both currently read "undefined"
-
-
 
 module.exports = generateMarkdown;

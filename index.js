@@ -7,7 +7,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
 function init() {
 // List of Questions
 inquirer
-    .prompt([
+    .prompt([   
     {
         type: 'input',
         name: 'github',
@@ -55,13 +55,11 @@ inquirer
         type: 'input',
         name: 'contributing',
         message: "How can the user contribute?"
-    },
-]).then((responses) => {
-    const gitHub = responses.github
+    }
+]).then((responses, github, email) => {
+    const github = responses.github
     const email = responses.email
-    const markdown = generateMarkdown(responses, gitHub, email);
-
-
+    const markdown = generateMarkdown(responses, github, email);
 
     fs.writeFile('./NewREADME/README.md', markdown, (err) => 
     err ? console.log(err) : console.log("Successfully generated ReadMe.")
