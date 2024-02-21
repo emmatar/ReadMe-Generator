@@ -49,16 +49,16 @@ inquirer
     {
         type: 'input',
         name: 'usage',
-        message: "How can the user employ the application?"
+        message: "How can the user implement the application?"
     },
     {
         type: 'input',
         name: 'contributing',
         message: "How can the user contribute?"
     }
-]).then((responses, github, email) => {
-    const github = responses.github
-    const email = responses.email
+]).then((responses) => {
+    const github = responses.github;
+    const email = responses.email;
     const markdown = generateMarkdown(responses, github, email);
 
     fs.writeFile('./NewREADME/README.md', markdown, (err) => 
