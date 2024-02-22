@@ -42,6 +42,8 @@
     - Ex: "What type of license should your project have?" is going to display options of licenses for the user to choose from that are commonly used. To choose which license the application requires, use the arrow keys on a keyboard to channel through the options. After hovering over the one that is correct, press the 'Enter" key and the next question will appear.
 
   Some questions will have a default value set for the answer. If the default value is of the user's liking, they can just hit enter and the default value will store as the users input. If the value is not representative of the correct answer, the user may just type the input they would like to display on their readme.
+
+  ![screenshot](/assets/images/ReadMe.png)
   
 
   ## Contributing 
