@@ -49,7 +49,7 @@ inquirer
     {
         type: 'input',
         name: 'usage',
-        message: "How can the user implement the application?"
+        message: "What is the process to implement the application?"
     },
     {
         type: 'input',
