@@ -7,7 +7,7 @@
   
   A place to kick back, relax (besides typing), and let us take care of your ReadMe needs!  
 
-  The ReadMe Generator is an node.js based application for developers to create a template for a readMe.md file. Although, a project's readme is a vital file for every application, spending a ton of time creating one takes precious time away from the really important tasks that need tackled!
+  The ReadMe Generator is a node.js based application for developers to create a template for a readMe.md file. Although, a project's readme is a vital file for every application, spending a ton of time creating one takes precious time away from the really important tasks that need tackled!
 
   ## Table of Contents
   - [Description](#description)
